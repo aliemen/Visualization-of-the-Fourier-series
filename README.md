@@ -1,6 +1,8 @@
 # Visualization of the Fourier series
 Here is some Python code that allows you to read in SVG files and approximate their paths using a Fourier series. The Fourier series can be animated and visualized, the function can be output as a two dimensional vector for Desmos and there is a method to output the coefficients as LaTeX code.
 
+Some example videos of the animations can be found under example_animations.
+
 # How to use the program
 You will need the packages `numpy`, `matplotlib.pyplot`, `matplotlib.animation`, `svgpathtools` and `scipy.optimize`. 
 The important settings can be done in the `main` function (file `FourierMain.py`) using the different variables (shortly explained in the code). If you want to read your own image, change the path for the SVG handler, for example `handler = SVG_Handler("images/img13.svg")`. Here `images/img13.svg` is the path relative to the `FourierMain.py` file.
