@@ -48,7 +48,7 @@ def fourier_animation(figure_data, fourier_data, plot_reference=False, handler=N
         y_lim = (np.amin(fourier_data[...,1]), np.amax(fourier_data[...,1]))
         x_abs, y_abs = x_lim[1]-x_lim[0], y_lim[1]-y_lim[0]
         
-        fig = plt.figure(figsize=(10, 10*y_abs/x_abs)) # (12,8)
+        fig = plt.figure(figsize=(2*10, 2*12*y_abs/x_abs)) # (12,8)
         
         ax = plt.axes(xlim=(x_lim[0]-x_abs*add_margin, x_lim[1]+x_abs*add_margin),
                       ylim=(y_lim[0]-y_abs*add_margin, y_lim[1]+y_abs*add_margin))
@@ -79,7 +79,7 @@ def fourier_animation(figure_data, fourier_data, plot_reference=False, handler=N
         graph = ax.plot([figure_data[0,0]], [figure_data[0,1]], label=f"Fourier Graph N = {fourier_N}", zorder=2)
     
     if not fourier_data is None:
-        fourier_vector = ax.plot(fourier_data[0,:,0], fourier_data[0,:,1], "-o", markersize=3.5,
+        fourier_vector = ax.plot(fourier_data[0,:,0], fourier_data[0,:,1], "-o", markersize=1.8, linewidth=0.5,
                                  label=f"Fourier Vector N = {fourier_data.shape[1]-1}", zorder=3)
    
     
